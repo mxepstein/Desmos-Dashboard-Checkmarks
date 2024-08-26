@@ -2,7 +2,9 @@
     "use strict";
     //The code below does almost all the work of the extension
     function startDownload() {
-        //let csv = [];
+        /* Used for CSV Donwloads
+        let csv = [];
+        */
 
         let studentList = document.getElementsByClassName('student-grid-row');
         for (var i = 0; i < studentList.length; i++) {
@@ -29,17 +31,23 @@
                     numberIncomplete++;
                 studentRow.push(kind)
             }
-            
+
+
+            ///Show the Checkmark Total Count
             let container = document.createElement('span'); // Create a new div container
             container.innerHTML="&nbsp &nbsp "+numberCorrect;
-            let temp=studentList[i].getElementsByClassName('grid-student-name')[0]
-            temp.appendChild(container);
-            console.log(temp.innerHTML+""+numberCorrect);
-            
+            let placement=studentList[i].getElementsByClassName('grid-student-name')[0] /*student-name-container*/
+            if (typeof placement.appendChild(container) !== 'undefined') {
+                placement.appendChild(container);
+            }
+            ///End Show the Checkmark Total Count
+
+
+            /*Used for CSV Download
             studentRow.unshift(numberIncomplete + ' Incomplete');
             studentRow.unshift(numberCorrect + ' Correct')
-
-            //csv.push(studentRow.join(','));
+            csv.push(studentRow.join(','));
+            */
         }
         /*
         let downloadLink = document.createElement("a");
@@ -56,7 +64,7 @@
     }
 
     function getKind(cell) {
-        
+
         if (cell.getElementsByClassName('correct-decorator').length > 0) {
             return "Correct";
         } else if (cell.getElementsByClassName('incorrect-decorator').length > 0) {
