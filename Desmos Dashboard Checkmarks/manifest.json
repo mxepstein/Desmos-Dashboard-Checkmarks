@@ -1,11 +1,11 @@
 {
 	"name": "Desmos Dashboard Checkmarks",
-	"description": "Show Checkmark Sums Desmos teacher dashboard. (unofficial)",
+	"description": "Show Checkmark Sums on the Desmos Teacher Dashboard. (unofficial)",
 	"version": "1.0",
 	"manifest_version": 3,
 	"permissions": ["scripting", "activeTab"],
 	"action": {
-   		"default_title": "Desmos Dashboard Checkmarks",  
+   		"default_title": "Desmos Dashboard Checkmarks",
 		"default_popup": "popup.html"
 	},
 	"icons": {
@@ -13,5 +13,5 @@
 		"64": "icons/64x64.png",
 		"128": "icons/128x128.png"
 	}
-    
+
 }
