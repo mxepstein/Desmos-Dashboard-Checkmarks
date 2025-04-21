@@ -1,7 +1,7 @@
 {
 	"name": "Desmos Dashboard Checkmarks",
 	"description": "Show Checkmark Sums on the Desmos Teacher Dashboard. (unofficial)",
-	"version": "1.0",
+	"version": "2.0",
 	"manifest_version": 3,
 	"permissions": ["scripting", "activeTab"],
 	"action": {
@@ -12,6 +12,12 @@
 		"32": "icons/32x32.png",
 		"64": "icons/64x64.png",
 		"128": "icons/128x128.png"
-	}
+	},
+	"background": {
+		"service_worker": "background.js"
+	  }
 
 }
+
+
+
